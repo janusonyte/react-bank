@@ -1,0 +1,254 @@
+@import './variables.module.scss';
+
+* {
+  font-family: monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+input {}
+
+button {
+  background-color: $gray;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  min-width: 100px;
+  margin: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  &:not(:disabled):hover {
+    outline: 0;
+    background: darken($gray, 20%);
+  }
+
+  &:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+
+  &.black {
+    background-color: $black;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: lighten($black, 10%);
+    }
+  }
+
+  &.blue {
+    background-color: $blue;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: darken($blue, 20%);
+    }
+  }
+
+  &.red {
+    background-color: $red;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: darken($red, 20%);
+    }
+  }
+
+  &.yellow {
+    background-color: $yellow;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: darken($yellow, 20%);
+    }
+  }
+
+  &.green {
+    background-color: $green;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: darken($green, 20%);
+    }
+  }
+
+  &.pink {
+    background-color: $pink;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: darken($pink, 20%);
+    }
+
+  }
+
+  &.slate-gray {
+    background-color: $slate-gray;
+    color: white;
+
+    &:not(:disabled):hover {
+      background: darken($slate-gray, 20%);
+    }
+
+  }
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .sort-button {
+    width: 30px;
+    height: 30px;
+    background-color: $blue;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: '\25B2';
+      font-size: 26px;
+    }
+
+    &.default::after {
+      content: 'S';
+      font-weight: bold;
+    }
+
+    &.down::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+h1 {
+  margin: 45px;
+  color: #F5F9E9;
+}
+
+p {
+  font-size: 30px;
+  padding: 0px 25px 10px 25px;
+  margin: auto;
+}
+
+
+ul.ul-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.acc-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+  color: $slate-gray;
+}
+
+.account {
+  display: flex;
+  justify-content: space-between;
+  color: $slate-gray;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.acc-fields {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.field-input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid $slate-gray;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.field-btn {
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.field-btn-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 20px;
+}
+
+.card {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.card-header {
+  background-image: linear-gradient(126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
+
+}
+
+.container {
+  background-color: #393e49;
+  border-radius: 10px;
+}
