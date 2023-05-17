@@ -26,7 +26,7 @@ export default function CreateAcc({ setCreateData }) {
                         <fieldset className="fields">
                             <input className="field-input" type="text" id="name" ref={nRef} placeholder="Vardas" required />
                             <input className="field-input" type="text" id="surname" ref={sRef} placeholder="Pavardė" required />
-                            <button className="slate-gray field-btn" onClick={save}>Sukurti</button>
+                            <button className="purple-gradient field-btn" onClick={save}>Sukurti</button>
                         </fieldset>
                     </form>
 
