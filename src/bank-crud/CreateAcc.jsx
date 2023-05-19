@@ -20,13 +20,13 @@ function CreateAcc({ setCreateData }) {
     return (
         <>
             <div className="card m-5">
-                <h5 className="card-header">Nauja sąskaita</h5>
+                <h5 className="card-header">Create a new account</h5>
                 <div className="m-3">
                     <form>
                         <fieldset className="fields">
-                            <input className="field-input" type="text" id="name" ref={nRef} placeholder="Vardas" required />
-                            <input className="field-input" type="text" id="surname" ref={sRef} placeholder="Pavardė" required />
-                            <button className="purple-gradient field-btn" onClick={save}>Sukurti</button>
+                            <input className="field-input" type="text" id="name" ref={nRef} placeholder="First name" required />
+                            <input className="field-input" type="text" id="surname" ref={sRef} placeholder="Last name" required />
+                            <button className="purple-gradient field-btn" onClick={save}>Create</button>
                         </fieldset>
                     </form>
 

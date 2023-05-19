@@ -31,9 +31,9 @@ function EditBalance({ accounts, setEditData }) {
 
 
     return (<div>
-        <input type="text" ref={changeBalance} className="field-input" placeholder="Suma (eurais)" />
-        <button onClick={addMoney} className="field-btn green">+ lėšų</button>
-        <button onClick={withdrawMoney} className="field-btn green">- lėšas</button>
+        <input type="text" ref={changeBalance} className="field-input" placeholder="Sum (euros)" />
+        <button onClick={addMoney} className="field-btn green"><span className="funds">+</span> Funds</button>
+        <button onClick={withdrawMoney} className="field-btn green"><span className="funds">-</span> Funds</button>
     </div>);
 }
 

@@ -16,15 +16,15 @@ const ExampleComponent = () => {
       sequence={[
         'Welcome to React Bank!',
         2000, // Waits 
-        'Sveiki atvykę į React banką!',
-        1000, // Waits
-        'Pridėkite naują sąskaitą.',
+        'Add a new account to start...',
+        2000, // Waits
+        '',
         2000
       ]}
       wrapper="span"
       cursor={true}
       repeat={Infinity}
-      style={{ fontSize: '1.5em', display: 'inline-block', color: '#FFDE66' }}
+      style={{ fontSize: '1.2em', display: 'inline-block', color: '#FFDE66', fontFamily: 'P2P', WebkitTextStroke: '1px #363738' }}
     />
   );
 };

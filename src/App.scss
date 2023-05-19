@@ -6,6 +6,18 @@
     url("./fonts/RobotoMono-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "P2P";
+  src: local("PressStart2P-Regular"),
+    url("./fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: local("Orbitron-Medium"),
+    url("./fonts/Orbitron-Medium.ttf") format("truetype");
+}
+
 * {
   font-family: "Roboto";
 }
@@ -51,11 +63,6 @@ button {
   margin: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-
-  // &:not(:disabled):hover {
-  //   outline: 0;
-  //   background: darken($gray, 20%);
-  // }
 
   &:disabled {
     filter: saturate(0.2) opacity(0.5);
@@ -130,7 +137,6 @@ button {
     transition: transform .5s;
 
     &:not(:disabled):hover {
-      // background-image: linear-gradient(-126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
       transform: scale(1.2);
     }
   }
@@ -238,10 +244,12 @@ fieldset {
   font-size: 12px;
 }
 
-.field-btn-cont {
-  display: flex;
-  flex-direction: row;
+.funds {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 20%;
 }
+
 
 .card-header {
   text-align: center;
@@ -267,7 +275,6 @@ fieldset {
 }
 
 .container {
-  // background-color: #393e49;
   background-color: #25af91;
   border-radius: 20px;
 }

@@ -8,9 +8,9 @@ function ListAcc({ accounts, setDeleteModalData, doSort, sort, setEditData }) {
 
     return (
         <div className="card m-5">
-            <h5 className="card-header">Sąskaitos</h5>
+            <h5 className="card-header">Current accounts</h5>
             <div className="card-body">
-                <p className="sort">Rūšiuoti<span className={'sort-button ' + sort} onClick={doSort}></span></p>
+                <p className="sort">Sort<span className={'sort-button ' + sort} onClick={doSort}></span></p>
                 <ul className="ul-style list-group list-group-flush">
                     {
                         accounts
@@ -23,15 +23,15 @@ function ListAcc({ accounts, setDeleteModalData, doSort, sort, setEditData }) {
                                                 <div className="acc-list">
                                                     <div className="account">
                                                         <div>
-                                                            <p className="acc-titles">Vardas:</p>
+                                                            <p className="acc-titles">Name:</p>
                                                             <p>{acc.Name}</p>
                                                         </div>
                                                         <div>
-                                                            <p className="acc-titles">Pavardė:</p>
+                                                            <p className="acc-titles">Surname:</p>
                                                             <p>{acc.Surname}</p>
                                                         </div>
                                                         <div>
-                                                            <p className="acc-titles">Lėšos:</p>
+                                                            <p className="acc-titles">Funds:</p>
                                                             <p>{acc.Balance}<span>€</span></p></div>
                                                     </div>
                                                     <form>
@@ -43,7 +43,7 @@ function ListAcc({ accounts, setDeleteModalData, doSort, sort, setEditData }) {
                                                         </fieldset>
                                                     </form>
                                                     <div className="field-btn-cont">
-                                                        <button className="field-btn red" onClick={_ => destroy(acc)}>Ištrinti</button>
+                                                        <button className="field-btn red" onClick={_ => destroy(acc)}>Delete</button>
                                                     </div>
                                                 </div>
                                             </div>
