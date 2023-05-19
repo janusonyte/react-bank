@@ -2,19 +2,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
 
 
 import { crudCreate, crudDelete, crudEdit, crudRead } from './Functions/localStorage';
-import CreateAcc from './bank-crud/CreateAcc';
-import DeleteAcc from './bank-crud/DeleteAcc';
-import EditBalance from './bank-crud/EditBalance';
-import ListAcc from './bank-crud/ListAcc';
+import { CreateAcc } from './bank-crud/CreateAcc';
+import { DeleteAcc } from './bank-crud/DeleteAcc';
+// import EditBalance from './bank-crud/EditBalance';
+import { ListAcc } from './bank-crud/ListAcc';
 
 const KEY = 'bankas';
 
-export default function App() {
+function App() {
 
   const [listUpdate, setListUpdate] = useState(Date.now());
   const [createData, setCreateData] = useState(null);
@@ -42,7 +42,6 @@ export default function App() {
   }, [createData]);
 
   //U update
-
   useEffect(_ => {
     if (null === editData) {
       return;
@@ -51,7 +50,7 @@ export default function App() {
     setListUpdate(Date.now());
   }, [editData]);
 
-  //D deleate
+  //D delete
   useEffect(_ => {
     if (null === deleteData) {
       return;
@@ -117,5 +116,7 @@ export default function App() {
     </>
   );
 }
+
+export default App;
 
 

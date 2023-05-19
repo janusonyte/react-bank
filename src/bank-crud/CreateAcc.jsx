@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 
-export default function CreateAcc({ setCreateData }) {
+function CreateAcc({ setCreateData }) {
 
     const nRef = useRef(null);
     const sRef = useRef(null);
@@ -35,3 +35,4 @@ export default function CreateAcc({ setCreateData }) {
         </>
     )
 }
+export { CreateAcc };

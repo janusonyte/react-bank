@@ -1,4 +1,4 @@
-export default function DeleteAccount({ deleteModalData, setDeleteModalData, setDeleteData }) {
+function DeleteAcc({ deleteModalData, setDeleteModalData, setDeleteData }) {
 
     const destroy = _ => {
         setDeleteData(deleteModalData);
@@ -50,3 +50,5 @@ export default function DeleteAccount({ deleteModalData, setDeleteModalData, set
         </div>
     );
 }
+
+export { DeleteAcc };

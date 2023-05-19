@@ -304,22 +304,22 @@ fieldset {
     justify-content: center;
 
     &:after {
-      content: '\26E3'; // descending
+      content: '\260A'; // desc
     }
 
     &.asc::after {
-      content: '\260A'; // ascending
+      content: '\260B'; //asc
+
     }
 
     &.default::after {
-      content: '\260B'; // default
+      content: '\26E3'; // default
     }
   }
 }
 
 .modal {
   display: block;
-  // background-color: rgba(13, 231, 255, 0.803);
   background: rgb(157, 106, 153);
   background: linear-gradient(90deg, rgba(157, 106, 153, 0.7259278711484594) 0%, rgba(17, 19, 18, 0.7455357142857143) 100%);
 
