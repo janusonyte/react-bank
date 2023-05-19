@@ -1,31 +1,39 @@
 import { useRef } from "react";
 
 
-function EditBalance(accounts, setEditData) {
+function EditBalance({ accounts, setEditData }) {
 
-    const balanceChange = useRef('0');
-    const currBalance = accounts.Balance;
-    const funds = balanceChange.current.value;
+    const changeBalance = useRef('0');
 
 
     const addMoney = () => {
-        setEditData(currBalance + funds);
+        const money = parseFloat(changeBalance.current.value);
+        const increasedBalance = accounts.Balance + money;
+
+        setEditData({ ...accounts, Balance: increasedBalance });
+        changeBalance.current.value = null;
+
     }
 
-    // const withdrawMoney = () => {
-    //     if (setEditData.accounts.Balance > funds) {
-    //         setEditData(accounts.Balance - funds);
-    //     } else {
-    //         setEditData(accounts.Balance);
-    //     }
+    const withdrawMoney = () => {
+        const money = parseFloat(changeBalance.current.value);
+        const currentBalance = accounts.Balance;
 
-    // }
+
+        if (currentBalance >= money) {
+            const intermittentBalance = accounts.Balance - money;
+            setEditData({ ...accounts, Balance: intermittentBalance });
+            changeBalance.current.value = null;
+        } else {
+            setEditData({ ...accounts, Balance: accounts.Balance });
+        }
+    }
 
 
     return (<div>
-        <input type="number" ref={balanceChange} className="field-input" />
+        <input type="text" ref={changeBalance} className="field-input" placeholder="Suma (eurais)" />
         <button onClick={addMoney} className="field-btn green">+ lėšų</button>
-        {/* <button onClick={withdrawMoney} className="field-btn green">- lėšas</button> */}
+        <button onClick={withdrawMoney} className="field-btn green">- lėšas</button>
     </div>);
 }
 

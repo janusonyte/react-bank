@@ -4,13 +4,30 @@ import './App.scss';
 
 // import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
-
-
 import { crudCreate, crudDelete, crudEdit, crudRead } from './Functions/localStorage';
 import { CreateAcc } from './bank-crud/CreateAcc';
 import { DeleteAcc } from './bank-crud/DeleteAcc';
-// import EditBalance from './bank-crud/EditBalance';
 import { ListAcc } from './bank-crud/ListAcc';
+import { TypeAnimation } from 'react-type-animation';
+
+const ExampleComponent = () => {
+  return (
+    <TypeAnimation
+      sequence={[
+        'Welcome to React Bank!',
+        2000, // Waits 
+        'Sveiki atvykę į React banką!',
+        1000, // Waits
+        'Pridėkite naują sąskaitą.',
+        2000
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      style={{ fontSize: '1.5em', display: 'inline-block', color: '#FFDE66' }}
+    />
+  );
+};
 
 const KEY = 'bankas';
 
@@ -84,7 +101,8 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>Welcome to React Bank!</h1>
+          {/* <h1>Welcome to React Bank!</h1> */}
+          <h1>{ExampleComponent()}</h1>
           <div className="container">
             <div className="row">
 

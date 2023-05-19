@@ -17,9 +17,9 @@ function ListAcc({ accounts, setDeleteModalData, doSort, sort, setEditData }) {
                             ? accounts.length
                                 ? accounts.map(acc => (
                                     <li key={acc.id}>
-                                        <div className="card m-5">
+                                        <div className="card inner-card m-5">
 
-                                            <div className="card-body">
+                                            <div className="card-body inner-card-body">
                                                 <div className="acc-list">
                                                     <div className="account">
                                                         <div>

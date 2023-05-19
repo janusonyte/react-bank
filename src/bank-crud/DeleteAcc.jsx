@@ -22,7 +22,7 @@ function DeleteAcc({ deleteModalData, setDeleteModalData, setDeleteData }) {
                             <p>Negalima trinti sąskaitos, kurioje yra lėšų.</p>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="button" onClick={_ => setDeleteModalData(null)}>Gerai</button>
+                            <button type="button" className="yellow" onClick={_ => setDeleteModalData(null)}>Gerai</button>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ function DeleteAcc({ deleteModalData, setDeleteModalData, setDeleteData }) {
                         <p className="modal-body-text">Ar tikrai norite ištrinti sąskaitą?</p>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="slate-gray" onClick={_ => setDeleteModalData(null)}>Atšaukti</button>
+                        <button type="button" className="yellow" onClick={_ => setDeleteModalData(null)}>Atšaukti</button>
                         <button type="button" className="red" onClick={destroy}>Ištrinti</button>
                     </div>
                 </div>

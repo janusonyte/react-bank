@@ -1,21 +1,22 @@
 @import './variables.module.scss';
 
+@font-face {
+  font-family: "Roboto";
+  src: local("RobotoMono-Regular"),
+    url("./fonts/RobotoMono-Regular.ttf") format("truetype");
+}
+
 * {
-  font-family: monospace;
+  font-family: "Roboto";
 }
 
 .App {
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  // background-color: #282c34;
+  background-color: #2CD2AE;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,7 @@ button {
   text-align: center;
   transition: 200ms;
   box-sizing: border-box;
-  border: 0;
+  border: 2px solid black;
   font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
@@ -83,27 +84,23 @@ button {
   &.red {
     background-color: $red;
     color: white;
+    transition: transform .5s;
 
     &:not(:disabled):hover {
       background: darken($red, 20%);
+      transform: scale(1.1);
     }
   }
 
   &.yellow {
     background-color: $yellow;
     color: white;
+    transition: transform .5s;
+
 
     &:not(:disabled):hover {
       background: darken($yellow, 20%);
-    }
-  }
-
-  &.green {
-    background-color: $green;
-    color: white;
-
-    &:not(:disabled):hover {
-      background: darken($green, 20%);
+      transform: scale(1.1);
     }
   }
 
@@ -130,10 +127,22 @@ button {
   &.purple-gradient {
     background-image: linear-gradient(126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
     color: white;
+    transition: transform .5s;
 
     &:not(:disabled):hover {
-      background-image: linear-gradient(-126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
+      // background-image: linear-gradient(-126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
+      transform: scale(1.2);
+    }
+  }
 
+  &.green {
+    background-color: $green;
+    color: white;
+    transition: transform .5s;
+
+    &:not(:disabled):hover {
+      background: darken($green, 20%);
+      transform: scale(1.1);
     }
   }
 
@@ -151,36 +160,6 @@ button {
   }
 }
 
-.list-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  .sort-button {
-    width: 30px;
-    height: 30px;
-    background-color: $blue;
-    color: white;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-
-    &:after {
-      content: '\25B2';
-      font-size: 26px;
-    }
-
-    &.default::after {
-      content: 'S';
-      font-weight: bold;
-    }
-
-    &.down::after {
-      transform: rotate(180deg);
-    }
-  }
-}
 
 h1 {
   margin: 45px;
@@ -270,16 +249,26 @@ fieldset {
 }
 
 .card {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-color: #FFDE66;
+  border: 2px solid black;
+  box-shadow: -16px 20px 0px 2px rgba(0, 0, 0, 1);
+}
+
+.inner-card {
+  box-shadow: none;
+  box-shadow: -16px 25px 0px 2px #d4b235;
 }
 
 .card-header {
-  background-image: linear-gradient(126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
-
+  background-color: #FFDE66;
+  color: black;
+  font-weight: 500;
+  border-bottom: 2px solid black;
 }
 
 .container {
-  background-color: #393e49;
+  // background-color: #393e49;
+  background-color: #25af91;
   border-radius: 20px;
 }
 
@@ -290,7 +279,7 @@ fieldset {
 .sort {
   width: 200px;
   font-size: 20px;
-  text-decoration: underline dotted #3a1477;
+  text-decoration: underline dotted #000000;
   text-underline-offset: 5px;
 
   .sort-button {
@@ -298,7 +287,7 @@ fieldset {
     height: 30px;
     font-size: 20px;
     cursor: pointer;
-    color: #9010da;
+    color: #000000;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -320,37 +309,42 @@ fieldset {
 
 .modal {
   display: block;
-  background: rgb(157, 106, 153);
-  background: linear-gradient(90deg, rgba(157, 106, 153, 0.7259278711484594) 0%, rgba(17, 19, 18, 0.7455357142857143) 100%);
+  background: rgb(255, 222, 102);
+  background: linear-gradient(90deg, rgba(255, 222, 102, 0.5298494397759104) 41%, rgba(81, 175, 125, 0.5970763305322129) 100%);
+  border: 2px solid black;
+}
 
-  .modal-content {
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-  }
+.modal-content {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #FFDE66;
+}
 
-  .modal-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.modal-footer {
+  border-top: 2px solid #FFDE66;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  .modal-title,
-  .modal-body {
-    color: #102A2D;
-  }
+.modal-title,
+.modal-body {
+  color: #FFDE66;
+}
 
-  .modal-body-text {
-    font-size: 20px;
-  }
+.modal-body-text {
+  font-size: 20px;
+}
 
-  .modal-header {
-    background-image: linear-gradient(126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
-  }
+.modal-header {
+  background-color: black;
+  border-bottom: 2px solid #FFDE66;
 
-  .modal-title {
-    font-size: 16px;
-    color: $gray;
+}
 
-  }
+.modal-title {
+  font-size: 16px;
+  color: #FFDE66;
+
 }
